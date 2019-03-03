@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="197dp"
+        android:layout_marginBottom="50dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="34dp"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="33dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="202dp"
+        android:layout_marginBottom="36dp"
+        android:text="id"
+        app:layout_constraintBottom_toTopOf="@+id/log_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="145dp"
+        android:text="Sign Out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id" />
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="207dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+</android.support.constraint.ConstraintLayout>
