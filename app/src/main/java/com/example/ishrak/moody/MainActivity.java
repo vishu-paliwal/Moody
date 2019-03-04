@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.moody.R;
@@ -20,6 +21,7 @@ import com.google.android.gms.tasks.Task;
 public class MainActivity extends AppCompatActivity {
     int RC_SIGN_IN=0;
     SignInButton signInButton;
+    Button signUp;
     GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         signInButton = findViewById(R.id.sign_in_button);
-
+        signUp = (Button)findViewById(R.id.button);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             Log.w("Google Sign In Error", "signInResult:failed code=" + e.getStatusCode());
-            Toast.makeText(MainActivity.this,"failed",Toast.LENGTH_LONG);
+            Toast.makeText(MainActivity.this,"failed",Toast.LENGTH_LONG).show();
         }
     }
 
@@ -86,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,Profiledisplay.class));
         }
         super.onStart();
+    }
+    public void onClick(View view){
+    Intent intent = new Intent(this,home.class);
+    startActivity(intent);
     }
 
 }
